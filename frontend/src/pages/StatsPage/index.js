@@ -8,7 +8,7 @@ import {parseISO, formatRelative} from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {StatsContainer, StatsRow, StatsBox, StatsBoxTitle} from './styles';
-
+import vars from '../../configs/vars';
 class StatsPage extends React.Component {
     constructor(props) {
         super(props);
@@ -53,7 +53,7 @@ class StatsPage extends React.Component {
                    </StatsContainer>
                ): (
                    <StatsContainer className="text-center">
-                        <p><b>https://piturwc.tk/{shortnedURL.code}</b></p>
+                        <p><b>{vars.HOST_APP + shortnedURL.code}</b></p>
                         <p>Redireciona para:<br/>{shortnedURL.url}</p>
                         <StatsRow>
                             <StatsBox>
